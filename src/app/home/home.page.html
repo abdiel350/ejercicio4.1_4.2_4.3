@@ -1,0 +1,45 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar style="--background: #3880ff; --color: white;">
+      <ion-title> Inicio </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content padding>
+    <!-- Aplicando el padding -->
+
+    <ion-card>
+      <ion-card-header>
+        <p>Bienvenido a</p>
+        <h1 class="texto-negro">!Videoclub¡</h1>
+        <p>
+          !Videoclub es una aplicación desarrollada con ionic. Para acceder a la
+          gestión del videoclub pulsa el siguiente botón:
+        </p>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- Botón para acceder a la página videoclub -->
+        <div class="button-container">
+          <ion-button fill="clear" class="texto"  routerLink="/videoclub">
+            Acceso a iVideoclub
+          </ion-button>
+          <ion-icon name="videocam" class="cam"></ion-icon>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <h1 class="texto-negro">Información sobre el autor</h1>
+        <p>Aplicación desarrollada por Javier Gallego</p>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- Botón para acceder a la página autor -->
+        <div class="button-container">
+        <ion-button fill="clear" class="texto"  routerLink="/autor">
+          Consultar información</ion-button>
+        <ion-icon name="person" class="cam"></ion-icon>
+      </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ion-app>

@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar style="--background: #3880ff; --color: white;"> 
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>videoclub</ion-title> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="listaPeliculas && listaPeliculas.length > 0; else listaVacia">
+ 
+    <ion-list>
+      <ion-item *ngFor="let pelicula of listaPeliculas; let i = index" (click)="verPaginaDetalle(i)" detail>
+        <ion-thumbnail slot="start"> 
+          <img [src]="'assets/posters/' + pelicula.poster" alt="{{ pelicula.title }}" />
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{ pelicula.title }}</h2>
+          <p>
+            <strong style="color: #666769;">Director:</strong> {{ pelicula.director }}
+          </p>
+          <p>
+            <strong style="color: #666769;">Año:</strong> {{pelicula.year }}
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <!-- Plantilla para lista vacía -->
+  <ng-template #listaVacia>
+    <div style="text-align: center; padding: 20px;">
+      <p>La Lista está Vacía</p>
+    </div>
+  </ng-template>
+</ion-content>

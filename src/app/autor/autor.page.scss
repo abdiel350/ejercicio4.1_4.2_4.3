@@ -1,0 +1,12 @@
+ion-list {
+  width: 100%;
+}
+
+.test-list ion-item {
+  --min-height: 0;
+}
+
+.test-list ion-label {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Videoclub",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
